@@ -32,7 +32,7 @@ nav{
 
 nav a{
   color: black;
-  font-weight: bold;
+  font-weight: bold;  
 }
 
 nav ul{
@@ -71,9 +71,17 @@ footer a:visited{
 /*****  End Starter Code ****/
 
 /* Requirement 1 code here*/
+nav a{
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
 
 /* Requirement 2 code here*/
-
+nav a:hover{
+  text-decoration: underline;
+  text-decoration-style: wavy;
+}
 
 
 a.skip{
@@ -84,20 +92,59 @@ a.skip{
   z-index: 1;
   /* Requirement 3 code here*/
   
+  position:relative;
+  right: 500px;
 }
 
 
 /* Requirement 4 code here*/
-
+nav a:focus {
+  border-top: 2px solid yellow;
+}
 
 .container{
   /* Requirement 5 code here*/
+  display: grid;
+
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  row-gap: 30px;
 
 }
 
+
 /* Requirements 6-10 here: */
+.intro{
+  
+  background: url("../images/header.jpg") #707070;;
+  min-height: 400px;
+  z-index: 1;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
+}
 
+.about, .clients, .method, .contact{
+  grid-column: 2;
+}
+
+img{
+  width: 100%;
+}
+
+.about-image, .clients-image, .method-image, .contact-image{
+  max-height: 500px;
+  display:block;
+  grid-column: 1 / span 3;
+}
+
+.text{
+  align-self: center;
+  max-height: 25vh;
+  overflow: scroll;
+}
 
 @media screen and (min-width: 700px){
   nav{
