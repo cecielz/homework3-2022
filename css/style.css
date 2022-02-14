@@ -83,7 +83,6 @@ nav a:hover{
   text-decoration-style: wavy;
 }
 
-
 a.skip{
   background: white;
   padding: 6px;
@@ -91,11 +90,9 @@ a.skip{
   transition: left 1s ease-out;
   z-index: 1;
   /* Requirement 3 code here*/
-  
   position:relative;
   right: 500px;
 }
-
 
 /* Requirement 4 code here*/
 nav a:focus {
@@ -107,28 +104,43 @@ nav a:focus {
   display: grid;
 
   grid-template-columns: 1fr 5fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  /* grid-template-rows: 1fr 1fr 1fr 1fr; */
   row-gap: 30px;
-
+  /* position: relative; */
 }
 
 
 /* Requirements 6-10 here: */
 .intro{
-  
-  background: url("../images/header.jpg") #707070;;
+  background: url("../images/header.jpg") #707070;
   min-height: 400px;
-  z-index: 1;
+  /* z-index: 1; */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 
 .about, .clients, .method, .contact{
   grid-column: 2;
+  display: block;
 }
+
+.about, .about-image{
+  grid-row: 1;
+}
+
+.clients, .clients-image{
+  grid-row: 2;
+}
+.method, .method-image{
+  grid-row: 3;
+}
+.contact, .contact-image{
+  grid-row: 4;
+}
+
+
 
 img{
   width: 100%;
@@ -136,8 +148,10 @@ img{
 
 .about-image, .clients-image, .method-image, .contact-image{
   max-height: 500px;
-  display:block;
+  display: block;
   grid-column: 1 / span 3;
+  overflow: hidden;
+  z-index: -2;
 }
 
 .text{
