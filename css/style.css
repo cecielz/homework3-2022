@@ -92,6 +92,7 @@ a.skip{
   /* Requirement 3 code here*/
   position:relative;
   right: 500px;
+  font-weight: normal;
 }
 
 /* Requirement 4 code here*/
@@ -124,7 +125,6 @@ nav a:focus {
 
 .about, .clients, .method, .contact{
   grid-column: 2;
-  display: block;
 }
 
 .about, .about-image{
@@ -166,48 +166,43 @@ img{
     /*Requirement 11*/
     padding-bottom: 35px;
     margin-top: 0;
+    
   }
 
   nav ul{
     text-align: right;
-  }
+  };
+  
 
   nav li{
     margin-left: 5%;
     margin-right:0;
-    
   }
   
   /* Requirements 12-15 here: */
-  a.skip{
-    background: white;
-    padding: 6px;
-    position:relative;
-    top: 20px;
-    font-weight: normal;
-  }
+
 
   a.skip:focus{
-    position: relative;
-    left: 10px;
+    position: absolute;
+    left: 0px;
     top: 20px;
+    right:auto;
     border-top: 2px solid yellow;
     outline: none;
   }
   .container{
     display: grid;
-  
     grid-template-columns: 50px auto 500px auto 50px;
     grid-template-rows: 300px 300px 300px 300px;
   }
 
 
-  .about-image, .clients, .method-image, .contact{
-    grid-column: 2 / span 2;
+  .container > .about-image, .clients, .method-image, .contact{
+    grid-column: 2 / span2;
   }
 
-  .about, .clients-image, .method, .contact-image{
-    grid-column: 3 / span 2;
+  .container > .about, .clients-image, .method, .contact-image{
+    grid-column: 3 / span2;
   }
 
 
